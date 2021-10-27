@@ -1,0 +1,104 @@
+@import url('../forms.css');
+@import url('../buttons.css');
+@import url('../inputs.css');
+@import url('./registernew_responsive.css');
+
+.container{
+    margin: 40px 10px 20px 10px;
+}
+
+.pag-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+}
+
+.pag-arrows-container{
+    display: flex;
+}
+
+.pag-arrows-container p{
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.pag-arrow{
+    visibility: hidden;
+}
+
+.pag-arrows-container .pag-arrow:hover{
+    color: #000;
+    cursor: pointer;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.filter-container{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.filter-container p{
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 5%;
+}
+
+.filter-container select{
+    background-color: #f9f9f9;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    font-size: 0.8em;
+    height: 2.5em;    
+}
+
+.filter-container select:hover{
+    border: 1px solid var(--bg-color);
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table .row:hover {background-color: #ddd;}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--bg-menu);
+    color: #000;
+}
+
+.brand, .category{
+    display: none;
+}
+
+.icon-cell{
+    text-align: center;
+    padding: 0;
+}
+
+.edit-icon{ content: url('../../images/edit_product.png') }
+.delete-icon{ content: url('../../images/delete.png') }
+.add-icon{ content: url('../../images/add.png') }
+
+.edit-icon, .add-icon, .delete-icon{
+    width: 25px;
+    transition: all 0.5s;
+}
+.edit-icon:hover, .delete-icon:hover, .add-icon:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}

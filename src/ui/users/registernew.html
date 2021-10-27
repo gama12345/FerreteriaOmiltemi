@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios - Ferreteria Omiltemi</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="optionsBar"></div>
+    <div class="form-container">
+        <div class="form">
+            <div class="header-form">
+                <h3>Registrar usuario</h3>
+            </div>
+            <div class="input-container">
+                <p>Nombre</p>
+                <input id="name" type="text" class="form-field input-form" />
+            </div>
+            <div class="input-container">
+                <p>Apellidos</p>
+                <input id="lastName" type="text" class="form-field input-form" />
+            </div>
+            <div class="input-container">
+                <p>Permisos</p>
+                <select id="role" class="form-field select-form" >
+                    <option value="owner">Propietario</option>
+                    <option value="admin">Administrador</option>
+                    <option value="employee">Empleado</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <p>Correo electrónico</p>
+                <input id="email" type="text" class="form-field input-form" />
+            </div>
+            <div class="input-container">
+                <p>Teléfono</p>
+                <input id="phone" type="text" class="form-field input-form" />
+            </div>
+            <div class="input-container">
+                <p>Contraseña</p>
+                <input id="password" type="password" class="input-form" />
+            </div>
+            <div class="input-container">
+                <p>Confirmar contraseña</p>
+                <input id="confirmPassword" type="password" class="input-form" />
+            </div>
+            <div id="formButtons" class="btn-container">
+                <button id="btnRegisterUser">Registrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

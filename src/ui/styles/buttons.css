@@ -1,0 +1,24 @@
+button{
+    font-size: 15px;
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #ffff;
+    background: var(--btn-gradient);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:focus{
+    border: 1px solid #000;
+}
+
+.btn-form{
+    transition: all 0.5s;
+}
+.btn-form:hover{
+    transform: scale(1.05);
+}

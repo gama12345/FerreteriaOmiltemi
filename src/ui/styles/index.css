@@ -1,0 +1,74 @@
+@import url("config.css");
+@import url("buttons.css");
+@import url("inputs.css");
+@import url("links.css");
+@import url("index_responsive.css");
+
+/*CONTAINERS*/
+.container{
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+}
+
+.login-container, .design-container{
+    height: 100%;
+    width: 50vw;
+}
+
+.design-container{
+    background-image: url('../images/bg_index.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section{
+    height: fit-content;
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btnLogin{
+    margin-top: 15px;
+}
+
+/*TEXT*/
+h2{
+    font-weight: 100;
+}
+.text-login{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+/*Images*/
+.img-logo{
+    content: url("../images/logo.png");
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+.img-logo-title{
+    content: url("../images/logo.png");
+    width: 40%;
+    border-radius: 5px;
+    display: none;
+}

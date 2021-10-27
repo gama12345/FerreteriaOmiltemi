@@ -1,0 +1,8 @@
+.login-link{
+    margin: 15px auto 15px auto;
+    font-size: 14px;
+    color: #000;
+}
+.login-link:hover{
+    color: #0000ffbd;
+}

@@ -1,0 +1,13 @@
+/*BACKGROUND DISAPPEARS*/
+
+@media(max-width: 768px){
+    .design-container, .img-logo{
+        display: none;
+    }
+    .login-container{
+        width: 100% !important;
+    }
+    .img-logo-title{
+        display: flex !important;
+    }
+}

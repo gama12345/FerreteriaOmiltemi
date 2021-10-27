@@ -1,0 +1,72 @@
+@import url('./config.css');
+@import url('./navbar_mobile.css');
+@import url('./navbar_responsive.css');
+
+nav{
+    width: 100vw;
+    max-width: 100%;
+    background-color: var(--bg-menu);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar-logo{
+    content: url("../images/logo.png");
+    height: 40px;
+    margin: 10px;
+}
+/*Menu container*/
+#menu{
+    display: flex;
+}
+
+/*Web menu*/
+#webmenu{
+    display: flex;
+    padding: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    border-radius: 25px;
+	background-color: var(--bg-color);
+    align-items: center;
+	-webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);  
+}
+
+#webmenu li a{    
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#webmenu li{
+    list-style: none;
+    position: relative;
+    padding: 5px 10px;
+    margin: 0 8px;
+}
+
+#webmenu li::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left:0;
+    height:100%;
+    width: 100%;
+    z-index:-1;
+    transition: .2s;
+    border-radius: 25px;
+}
+
+#webmenu li:hover::before {
+    background: var(--btn-gradient);
+    box-shadow: 0px 3px 10px 0px black;
+    transform: scale(1.1);
+}
+
+#webmenu li:hover{
+    color: #000;
+}

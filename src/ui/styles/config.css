@@ -1,0 +1,16 @@
+:root{
+    --bg-color: #EC7C26;
+    --bg-color-light: #ff9543dc;
+    --content-gradient: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(236,171,38,1) 0%, var(--bg-color) 100%);
+    --form-gradient: linear-gradient(to right, #abbaab, #ffffff);
+    --btn-gradient: linear-gradient(180deg, rgba(2,0,36,1) 0%, var(--bg-color) 0%, rgba(236,171,38,1) 100%);
+    --bg-color-fade: #ec7c268e;
+    --bg-menu: rgba(128, 128, 128, 0.6);
+    --bg-blue: rgb(74, 115, 226);
+}
+body, *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+}

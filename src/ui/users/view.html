@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios - Ferreteria Omiltemi</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="optionsBar"></div>
+    
+    <div class="form-container">
+        <div class="search-container">
+            <p>Buscar por nombre</p>
+            <div class="autocomplete">
+                <input id="searchUser" type="text" class="input-form" autocomplete="off"/>
+            </div>
+        </div>
+        <div class="form">
+            <div class="header-form">
+                <h3>Datos del usuario</h3>
+                <button id="btnEditUser" class="btn-form">Editar</button>
+            </div>
+            <div class="input-container">
+                <p>Nombre</p>
+                <input id="nameUser" type="text" class="form-field input-form" disabled/>
+            </div>
+            <div class="input-container">
+                <p>Apellidos</p>
+                <input id="lastNameUser" type="text" class="form-field input-form" disabled/>
+            </div>
+            <div class="input-container">
+                <p>Permisos</p>
+                <select id="roleUser" class="form-field select-form" disabled>
+                    <option value="owner">Propietario</option>
+                    <option value="admin">Administrador</option>
+                    <option value="employee">Empleado</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <p>Correo electrónico</p>
+                <input id="emailUser" type="text" class="form-field input-form" disabled/>
+            </div>
+            <div class="input-container">
+                <p>Teléfono</p>
+                <input id="phoneUser" type="text" class="form-field input-form" disabled/>
+            </div>
+            <div class="input-container">
+                <p>Fecha registro</p>
+                <input id="registrationDateUser" type="text" class="input-form" disabled/>
+            </div>
+            <div class="input-container">
+                <p>Estado</p>
+                <select id="statusUser" class="form-field select-form" disabled>
+                    <option value="ACTIVE">Habilitado</option>
+                    <option value="DISABLED">Deshabilitado</option>
+                </select>
+            </div>
+            <div id="formButtons" class="btn-container">
+                <button id="btnCancelEditUser">Cancelar</button>
+                <button id="btnSaveUser">Guardar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

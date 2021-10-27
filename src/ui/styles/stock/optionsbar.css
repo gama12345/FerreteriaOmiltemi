@@ -1,0 +1,44 @@
+@import url('../config.css');
+
+.options-bar{
+    background-color: var(--bg-color-light);
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+h2{
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.actions-section{
+    display: flex;
+}
+
+#addProductIcon{
+    content: url('../../images/new_product.png');
+}
+#recordsIcon{
+    content: url('../../images/records.png');
+}
+.option-icon{
+    height: 20px;
+    margin-right: 5px;
+}
+
+.option-button{
+    display: flex;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 15px 10px 15px;
+    background: none;
+    border: none;
+    color: #000;
+}
+.option-button:hover {
+    cursor: pointer;
+    filter: invert(100%) brightness(0.98);
+}
+.active{
+    border-bottom: 2px solid #000;
+}

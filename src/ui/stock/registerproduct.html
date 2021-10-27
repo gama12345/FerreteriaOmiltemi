@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Ferreteria Omiltemi</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="optionsBar"></div>
+    <div class="form-container">
+        <div class="form">
+            <div class="header-form">
+                <h3>Registrar producto</h3>
+            </div>
+            <div class="input-container">
+                <p>Nombre</p>
+                <input id="name" type="text" class="input-form" />
+            </div>
+            <div class="input-container">
+                <p>Nombre corto</p>
+                <input id="shortName" type="text" class="input-form" placeholder="20 caracteres máximo"/>
+            </div>
+            <div class="input-container">
+                <p>Descripción</p>
+                <input id="description" type="text" class="input-form" />
+            </div>
+            <div class="input-container">
+                <p>Categoria</p>
+                <div class="option-container">
+                    <select id="category" class="select-form" >
+                        
+                    </select>
+                    <button id="categoryOther">Otra</button>
+                </div>
+            </div>
+            <div class="input-container">
+                <p>Marca</p>
+                <div class="option-container">
+                    <select id="brand" class="select-form" >
+                        
+                    </select>
+                    <button id="brandOther">Otra</button>
+                </div>
+            </div>
+            <div class="input-container">
+                <p>Material</p>
+                <div class="option-container">
+                    <select id="material" class="select-form" >
+                        
+                    </select>
+                    <button id="materialOther">Otro</button>
+                </div>
+            </div>
+            <div class="input-container">
+                <p>Proveedor</p>
+                <select id="supplier" class="select-form" >
+                    
+                </select>
+            </div>
+            <div class="input-container">
+                <p>Unidad de venta</p>
+                <div class="option-container">
+                    <select id="salesUnit" class="select-form" >
+                        
+                    </select>
+                    <button id="salesUnitOther">Otra</button>
+                </div>
+            </div>
+            <div class="input-container">
+                <p>Costo de compra (por unidad)</p>
+                <input id="cost" type="text" class="input-form" />
+            </div>
+            <div class="input-container">
+                <p>Precio de venta (por unidad)</p>
+                <input id="price" type="text" class="input-form" />
+            </div>
+            
+            <div class="input-container">
+                <p>Imágenes</p>
+                <div class="images-container">
+                    <div class="upload-container">
+                        <div class="loader-container">
+                            <input id="imageOne" class="loader-image" type="file" accept="image/*" />
+                            <label for="imageOne"></label>
+                        </div>
+                        <div class="preview-container">
+                            <span id="imageOnePreview" class="image-preview" ></span>
+                        </div>
+                    </div>
+                    <div class="upload-container">
+                        <div class="loader-container">
+                            <input id="imageTwo" class="loader-image" type="file" accept=".png, .jpg, .jpeg" />
+                            <label for="imageTwo"></label>
+                        </div>
+                        <div class="preview-container">
+                            <span id="imageTwoPreview" class="image-preview"></span>
+                        </div>
+                    </div>
+                    <div class="upload-container">
+                        <div class="loader-container">
+                            <input id="imageThree" class="loader-image" type="file" accept=".png, .jpg, .jpeg" />
+                            <label for="imageThree"></label>
+                        </div>
+                        <div class="preview-container">
+                            <span id="imageThreePreview" class="image-preview"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="formButtons" class="btn-container">
+                <button id="btnRegisterProduct">Registrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

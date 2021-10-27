@@ -1,0 +1,65 @@
+@import url('../forms.css');
+@import url('../buttons.css');
+@import url('../inputs.css');
+@import url('./editproduct_responsive.css');
+
+.btnback-container{    
+    margin: 20px auto 20px auto;
+    width: 80vw;
+}
+.option-container{
+    display: flex;
+    justify-content: space-between;
+}
+.select-form{
+    width: 85%;
+}
+
+.images-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.upload-container{
+    position: relative;
+    width: 100px;
+}
+
+.loader-container{
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    top: 0px;
+}
+.loader-image{
+    display: none;
+}
+.loader-container label{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: url('../../images/edit.png');
+    margin-bottom: 0;
+    padding: 5px;
+    border-radius: 100%;
+    background: #FFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all .2s ease-in-out;
+}
+.loader-container label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+}
+
+.image-preview{
+    display: block;
+    background-image: url('../../images/image_preview.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+}

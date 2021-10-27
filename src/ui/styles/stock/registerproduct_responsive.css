@@ -1,0 +1,36 @@
+
+@media(min-width: 650px){
+    .select-form{
+        width: 90% !important;
+    }
+    .images-container{
+        max-width: 80% !important;
+    }
+    .image-preview{
+        width: 120px !important;
+        height: 120px !important;
+    }
+    .loader-container{
+        right: -16px !important;
+        top: 3px!important;
+    }
+}
+
+@media(min-width: 750px){
+    .images-container{
+        max-width: 70% !important;
+    }
+}
+
+@media(min-width: 850px){
+    .images-container{
+        max-width: 450px !important;
+    }
+}
+
+@media(min-width: 1250px){
+    .select-form{
+        width: 95% !important;
+    }
+    
+}

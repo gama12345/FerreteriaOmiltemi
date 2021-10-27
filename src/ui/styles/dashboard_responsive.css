@@ -1,0 +1,29 @@
+
+@media(min-width: 576px){
+    #container{
+        width: 65vw !important;
+    }
+}
+@media(min-width: 768px){
+    #container{
+        width: 55vw !important;
+    }
+}
+@media(min-width: 900px){
+    #container{
+        width: 70vw !important;
+    }
+    .info-text{
+        margin-left: 0 !important;
+    }
+    .options{
+        display: flex;
+        justify-content: space-between;
+    }
+    .option-container{
+        width: 40%;
+    }
+    .description{
+        font-size: 15px;
+    }
+}

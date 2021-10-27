@@ -1,0 +1,94 @@
+/*Mobile menu*/
+#mobilesection{
+    display: none;
+    z-index: 100;
+}
+
+.menu-icon{
+    content: url('../images/menu.png');
+}
+.close-icon{
+    content: url('../images/close.png');
+}
+.logout-icon{
+    content: url('../images/logout.png');
+}
+
+.small-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.icon-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.icon-text{
+    font-size: 12px;
+    font-weight: 900;
+}
+.icon-container:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="checkbox"], .menu-icon, .close-icon {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 0;
+    right: 100px;
+    top: 15px;
+    width: 28px;
+    height: 28px;
+}
+  
+.menu-icon, .close-icon {
+    pointer-events: none;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+}
+
+.icon:hover, input[type="checkbox"]:hover, .menu-icon:hover, .close-icon:hover{
+    cursor: pointer;
+}
+
+#mobilemenu{
+    position: absolute;
+    top: 60px;
+    left: 0;  
+    list-style: none;  
+}
+
+#mobilemenu a{
+    display: block;
+    width: 90vw;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    background: var(--bg-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+}
+
+#mobilesection input:checked ~ #mobilemenu{
+    display: block;
+}
+
+#mobilesection input:checked ~ .menu-icon,
+#mobilesection input:not(:checked) ~ .close-icon {
+    display: none;
+}
+
+#mobilemenu a:hover{
+    background-color: #fff;
+    color: var(--bg-color);
+}

@@ -1,0 +1,33 @@
+.login-style{
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 6px 5px;
+    font-size: 13px;
+}
+.login-style:focus{
+    border: 1.5px solid var(--bg-color);
+}
+
+.input-form{
+    width: calc(100% - 10px);
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    font-size: 0.8em;
+    height: 1.8em;  
+}
+
+.select-form{
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    font-size: 0.8em;
+    height: 3em;    
+}
+
+.input-form:focus, .select-form:focus {
+    border-color: var(--bg-color);
+}

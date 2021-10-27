@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Ferreteria Omiltemi</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="optionsBar"></div>
+    
+    <div class="container">       
+        <div class="pag-header">
+            <h4 id="headerTitle">Cargando...</h4>
+            <div class="pag-arrows-container">
+                <p id="arrowGoStart" class="pag-arrow" title="Ir al inicio">&#60&#60</p>
+                <p id="arrowGoPrevious" class="pag-arrow" title="Anterior">&#60</p>
+                <p id="currentPage" class="pag-count"></p>
+                <p id="arrowGoNext" class="pag-arrow" title="Siguiente">&#62</p>
+                <p id="arrowGoLast" class="pag-arrow" title="Ir al final">&#62&#62</p>
+            </div>
+        </div>
+        <div claass="table-container">
+            <div class="filter-container">
+                <p>Filtrar por</p>                
+                <select id="filter" >
+                    <option value="name">Nombre</option>
+                    <option value="min_stock">Existencias (menor)</option>
+                    <option value="max_stock">Existencias (mayor)</option>
+                </select>
+            </div>
+            <table id="productsTable">
+                <tr>
+                    <th id="col-name">Nombre</th>
+                    <th id="col-brand" class="brand">Marca</th>
+                    <th id="col-supplier">Precio</th>
+                    <th id="col-category" class="category">Categoria</th>
+                    <th id="col-stock" colspan="4">Existencias</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
