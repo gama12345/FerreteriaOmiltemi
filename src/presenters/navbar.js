@@ -46,7 +46,7 @@ function checkPermissions(){
 function getNavBarLocation(){
     const locationSplit = location.href.toString().split("/");
     const module = locationSplit[locationSplit.length-2];
-    if( module == "users" || module == "suppliers" || module == "stock" || module == "sales"){
+    if( module == "users" || module == "suppliers" || module == "stock" || module == "sales" || module == "reports"){
         return "../navbar.html";
     }
     return "./navbar.html";

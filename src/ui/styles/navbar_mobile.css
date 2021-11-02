@@ -36,7 +36,7 @@
     cursor: pointer;
 }
 
-input[type="checkbox"], .menu-icon, .close-icon {
+#checkboxLogout, .menu-icon, .close-icon {
     position: absolute;
     box-sizing: border-box;
     padding: 0;
@@ -50,11 +50,11 @@ input[type="checkbox"], .menu-icon, .close-icon {
     pointer-events: none;
 }
 
-input[type="checkbox"] {
+#checkboxLogout {
     opacity: 0;
 }
 
-.icon:hover, input[type="checkbox"]:hover, .menu-icon:hover, .close-icon:hover{
+.icon:hover, #checkboxLogout:hover, .menu-icon:hover, .close-icon:hover{
     cursor: pointer;
 }
 

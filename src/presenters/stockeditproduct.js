@@ -80,7 +80,11 @@ async function gettingProductData(id){
     description.value = product.description;
     cost.value = product.cost;
     price.value = product.price;
-    onLoadingOptions();
+    await onLoadingOptions();
+    category.value = product.category;
+    brand.value = product.brand;
+    material.value = product.material;
+    salesUnit.value = product.sales_unit;
     if(product.images) setProductImages(product.images);
 }
 

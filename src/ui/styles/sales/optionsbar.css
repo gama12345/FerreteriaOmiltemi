@@ -15,7 +15,7 @@ h2{
     display: flex;
 }
 
-#addProductIcon{
+#registerSaleIcon{
     content: url('../../images/new_product.png');
 }
 #recordsIcon{

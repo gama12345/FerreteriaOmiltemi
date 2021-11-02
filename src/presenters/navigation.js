@@ -1,8 +1,8 @@
 
 //Returns to index.html
-const backToLogin = () => location.href = "/ferreteria-omiltemi/build/index.html";
+const backToLogin = () => location.href = "/index.html";
 
-const goDashboard = () => location.href = "/ferreteria-omiltemi/build/dashboard.html"
+const goDashboard = () => location.href = "/dashboard.html"
 
 const backToStockView = () => location.href = '../stock/view.html';
 

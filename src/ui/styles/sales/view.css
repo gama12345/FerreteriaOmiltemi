@@ -81,24 +81,17 @@ table th {
     color: #000;
 }
 
-.brand, .category{
-    display: none;
-}
-
 .icon-cell{
     text-align: center;
     padding: 0;
 }
 
-.edit-icon{ content: url('../../images/edit_product.png') }
-.delete-icon{ content: url('../../images/delete.png') }
-.add-icon{ content: url('../../images/add.png') }
-
-.edit-icon, .add-icon, .delete-icon{
+.cancel-icon{ content: url('../../images/cancel.png') }
+.cancel-icon{
     width: 25px;
     transition: all 0.5s;
 }
-.edit-icon:hover, .delete-icon:hover, .add-icon:hover{
+.cancel-icon:hover{
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }

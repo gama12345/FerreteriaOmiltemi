@@ -12,6 +12,21 @@ const getProductById = async (id) => {
     return docSnap.exists() ? docSnap.data() : null;
 }
 
+const getAllNamesProducts = async () => {
+    const q = query(productsRef);
+    const querySnapshot = await getDocs(q);
+    let productsList = [];
+    querySnapshot.forEach(product => {
+        productsList.push(
+            {
+                unique_key: product.id,
+                search_field: `${product.data().name}`,                
+            }
+        );
+    });
+    return productsList;    
+}
+
 const checkUniqueness = async (field_name, field) => {
     const q = query(productsRef, where(field_name, "==", field));
     const querySnapshot = await getDocs(q);
@@ -134,8 +149,7 @@ const editProduct = async (id, name, short_name, description, category, brand, m
         sales_unit: sales_unit,
         cost: cost,
         price: price,
-        discount: "Indefinido",
-        stock: 0        
+        discount: "Indefinido"
     })
 }
 
@@ -149,6 +163,26 @@ const deleteProduct = async id => {
     await updateProductCount(-1);
 }
 
-export { getProductById, checkUniqueness, registerProduct, updateImagesURL, getProductImages,
+const stockValidation = async list => {
+    for(const element of list) {
+        const product = await getProductById(element.id);
+        if(element.quantity > product.stock) return product;
+    };
+    return null;
+}
+
+const getAllProducts = async () => {
+    let q = query(productsRef, orderBy("name"));
+    const querySnapshot = await getDocs(q);
+    return querySnapshot.docs;
+}
+
+const getOutOfStockProducts = async () => {
+    let q = query(productsRef, where("stock", "==", 0),orderBy("name"));
+    const querySnapshot = await getDocs(q);
+    return querySnapshot.docs;
+}
+
+export { getProductById, getAllNamesProducts, checkUniqueness, registerProduct, updateImagesURL, getProductImages,
             updateProductCount, uploadProductImages, getProductCount, getProducts, updateStockExistences,
-            deleteImage, editProduct, deleteProduct }
+            deleteImage, editProduct, deleteProduct, stockValidation, getAllProducts, getOutOfStockProducts }

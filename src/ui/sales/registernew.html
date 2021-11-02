@@ -12,33 +12,46 @@
     
     <div class="container">       
         <div class="pag-header">
-            <h4 id="headerTitle">Cargando...</h4>
-            <div class="pag-arrows-container">
-                <p id="arrowGoStart" class="pag-arrow" title="Ir al inicio">&#60&#60</p>
-                <p id="arrowGoPrevious" class="pag-arrow" title="Anterior">&#60</p>
-                <p id="currentPage" class="pag-count"></p>
-                <p id="arrowGoNext" class="pag-arrow" title="Siguiente">&#62</p>
-                <p id="arrowGoLast" class="pag-arrow" title="Ir al final">&#62&#62</p>
-            </div>
+            <h4 id="headerTitle">Registro de venta</h4>
         </div>
         <div claass="table-container">
-            <div class="filter-container">
-                <p>Filtrar por</p>                
-                <select id="filter" >
-                    <option value="name">Nombre</option>
-                    <option value="min_stock">Existencias (menor)</option>
-                    <option value="max_stock">Existencias (mayor)</option>
-                </select>
+        
+            <div class="client-container">
+                <p>Cliente: </p>
+                <div class="autocomplete autocomplete-client">
+                    <input id="inputClient" type="text" class="input-form" autocomplete="off"/>
+                </div>
+                <label class="checkbox-label"><input id="notRegisteredClient" class="checkbox-client" type="checkbox" > No registrado</label>
             </div>
+            
+            <div class="search-container">
+                <p>Nombre del producto</p>
+                <div class="autocomplete">
+                    <input id="searchProduct" type="text" class="input-form" autocomplete="off"/>
+                </div>
+            </div>
+            <div id="ticketElements">
             <table id="productsTable">
                 <tr>
-                    <th id="col-name">Nombre</th>
-                    <th id="col-brand" class="brand">Marca</th>
+                    <th id="col-name" colspan="2">Producto</th>
+                    <th class="sales-unit">Presentación</th>
+                    <th id="col-quantity" class="quantity">Cantidad</th>
                     <th id="col-supplier">Precio</th>
-                    <th id="col-category" class="category">Categoria</th>
-                    <th id="col-stock" colspan="4">Existencias</th>
+                    <th id="col-subtotal">Subtotal</th>
                 </tr>
             </table>
+            <div class="sale-info" id="ticketElementDiscount">
+                <p class="sale-info-title">Descuentos:</p>
+                <p id="discount">$ 0.00</p>
+            </div>
+            <div class="sale-info">
+                <p class="sale-info-title">Total a pagar:</p>
+                <p id="total">$ 0.00</p>
+            </div>
+            </div>
+            <div class="btn-container">
+                <button id="btnRegisterSale">Registrar</button>
+            </div>
         </div>
     </div>
 </body>

@@ -17,23 +17,11 @@
     color: #fff;
 }
 
-.pag-arrows-container{
-    display: flex;
-}
-
-.pag-arrows-container p{
-    color: #fff;
-    font-size: 20px;
-    margin-right: 10px;
-}
-
-.pag-arrow{
-    visibility: hidden;
-}
-
-.pag-arrows-container .pag-arrow:hover{
-    color: #000;
-    cursor: pointer;
+.search-container{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: var(--bg-color);
+    font-size: 16px;
 }
 
 table{
@@ -41,27 +29,60 @@ table{
     width: 100%;
 }
 
-.filter-container{
+.client-container{
     display: flex;
     padding: 10px;
     align-items: center;
 }
-.filter-container p{
+.client-container p{
     font-size: 14px;
     font-weight: 600;
     margin-right: 5%;
+    color: var(--bg-color);
+}
+.autocomplete-client{
+    width: 50% !important;
+    margin-right: 5%;
 }
 
-.filter-container select{
-    background-color: #f9f9f9;
-    border: 1px solid #d4d4d4;
-    border-radius: 5px;
-    font-size: 0.8em;
-    height: 2.5em;    
+.checkbox-client{
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
 }
 
-.filter-container select:hover{
-    border: 1px solid var(--bg-color);
+.checkbox-client::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.checkbox-client:checked::before {
+    transform: scale(1);
+    background-color: var(--bg-color);
+  }
+
+.checkbox-label{
+    color: var(--bg-color);
+    font-size: 14px;
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
 }
 
 table td, table th {
@@ -81,7 +102,7 @@ table th {
     color: #000;
 }
 
-.brand, .category{
+.sales-unit{
     display: none;
 }
 
@@ -90,15 +111,27 @@ table th {
     padding: 0;
 }
 
-.edit-icon{ content: url('../../images/edit_product.png') }
-.delete-icon{ content: url('../../images/delete.png') }
-.add-icon{ content: url('../../images/add.png') }
+.remove-icon{ content: url('../../images/delete.png') }
 
-.edit-icon, .add-icon, .delete-icon{
+.remove-icon{
     width: 25px;
     transition: all 0.5s;
 }
-.edit-icon:hover, .delete-icon:hover, .add-icon:hover{
+.remove-icon:hover{
     cursor: pointer;
     transform: scale(1.2);
+}
+
+.sale-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.sale-info p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#btnRegisterSale{
+    margin-right: 0 !important;
 }

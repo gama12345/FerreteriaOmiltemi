@@ -15,6 +15,16 @@ const validateUserLogin = async (email, pass) => {
     return docUser ? docUser.id : null;
 }
 
+const validateOwnerPass = async pass => {
+    const encodedPass = Buffer.from(pass).toString("base64");
+    const q = query(usersRef, where("role", "==", "owner"), 
+                    where("password", "==", encodedPass), where("status", "==", "ACTIVE"));
+    const querySnapshot = await getDocs(q);
+    let docUser;
+    if(!querySnapshot.empty) docUser = querySnapshot.docs[0];
+    return docUser ? docUser.id : null;
+}
+
 const checkUniqueness = async (field, field_name) => {
     const q = query(usersRef, where(field_name, "==", field));
     const querySnapshot = await getDocs(q);
@@ -102,4 +112,4 @@ const registerUser = async (userName, userLastName, userRole, userEmail, userPho
 }
 
 export { validateUserLogin, checkUniqueness, getUserById , getUserIdByEmail, getRole,
-    getUserName, getAllNamesUsers, setNewPassword, updateUser, registerUser}
+    getUserName, getAllNamesUsers, setNewPassword, updateUser, registerUser, validateOwnerPass}

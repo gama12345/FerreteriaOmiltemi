@@ -5,6 +5,7 @@
     padding: 6px 5px;
     font-size: 13px;
 }
+
 .login-style:focus{
     border: 1.5px solid var(--bg-color);
 }

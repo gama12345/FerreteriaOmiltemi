@@ -155,5 +155,4 @@ const onDeletingProduct = async (element) => {
         await deleteProduct(productId);
         showMsg("Producto eliminado", "Se ha eliminado el producto correctamente.", "../stock/view.html");
     }
-    
 }

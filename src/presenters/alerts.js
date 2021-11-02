@@ -28,8 +28,8 @@ const showMsg = (titulo, msg, url = null) => {
   const showConfirm = async (title, msg, confirmBtnTxt) => {
     let res = false;
     await Swal.fire({
+      html: msg,
       title: title,
-      text: msg,
       icon: 'question',
       confirmButtonText: confirmBtnTxt,
       cancelButtonText: 'Cancelar',
@@ -41,22 +41,24 @@ const showMsg = (titulo, msg, url = null) => {
     return res;
   }
 
-  const showInput = async (title, desc) => {
+  const showInput = async (title, desc, productExistences = null) => {
     let result = { isConfirmed: false };
+    let type = 'text';
+    if(title == "Cancelar venta") type = 'password'
     await Swal.fire({
       title: title,
-      input: 'text',
+      input: type,
       inputLabel: desc,
       showCancelButton: true,
       inputValidator: (value) => {
-        if (!value) {
-          return "El campo no puede ser vacío"
-        }
-        if(title == "Resurtir producto"){
-          if(!isValidInteger(value)){
-            return "Ingrese un número entero de hasta cinco digitos."
+        if (!value) return "El campo no puede ser vacío"
+        if(title == "Resurtir producto" || title == "Agregar producto"){
+          if(!isValidInteger(value)) return "Ingrese un número entero de hasta cinco digitos."          
+          if(productExistences != null){
+            const quantity = parseInt(value);
+            if(quantity > productExistences) return `El número de existencias del producto es ${productExistences}`
           }
-        }
+        }      
       }
     }).then(res => {
       result = res;
